@@ -1,0 +1,48 @@
+@media(max-width: 900px){
+    body {
+        background: #444341 !important;
+    }
+    nav {
+        ul {
+            display: none;
+        }
+        .menu-icon {
+            display: block !important;
+        }
+    }
+    .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: #292727e7;
+        height: 100vh;
+        width: 100%;
+    
+        &.show {
+            display: block;
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30vh;
+    
+            li {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .content {
+        h1 {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            width: 100% !important;
+        }
+    }
+}

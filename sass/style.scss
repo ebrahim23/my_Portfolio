@@ -1,0 +1,132 @@
+@import "media";
+
+$main-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: #444341;
+    position: relative;
+    overflow: hidden;
+}
+body.home {
+    background: url(../images/cover.jpg) no-repeat center center/cover;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #474643af;
+    align-items: center;
+    color: #FFF;
+
+    .menu-icon {
+        position: absolute;
+        z-index: 3;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        display: none;
+        transition: all .3s;
+
+        .menu-line {
+            width: 28px;
+            height: 3px;
+            background-color: #FFF;
+            margin: 0 0 5px 0;
+        }
+        &.close {
+            .menu-line {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -6px);
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+            text-transform: capitalize;
+
+            a {
+                text-decoration: none;
+                color: $main-color;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+
+            .active {
+                color: #FFF;
+            }
+        }
+    }
+}
+.sub-menu {
+    display: none;
+}
+.content {
+    color: #FFF;
+    
+    h1 {
+        font-size: 5rem;
+        margin-top: 20vh;
+
+        span {
+            color: $main-color;
+        }
+    }
+    h2 {
+        font-size: 4rem;
+        margin-top: 10vh;
+
+        span {
+            color: $main-color;
+        }
+    }
+    p {
+        line-height: 1.6;
+        background-color: #5f5e5b73;
+        font-size: 2rem;
+        width: 60%;
+    }
+
+    .icons {
+        margin-top: 30px;
+        .icon {
+            color: #FFF;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: all .3s;
+            
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
