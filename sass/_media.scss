@@ -1,3 +1,14 @@
+@media(max-width: 425px) {
+    .gallery {
+        .project {
+            img {
+                width: 280px !important;
+                height: 200px !important;
+            }
+        }
+    }
+}
+
 @media(max-width: 900px){
     body {
         background: #444341 !important;
@@ -44,5 +55,13 @@
         p {
             width: 100% !important;
         }
+    }
+    .about-content {
+        grid-template-areas: 
+        'bio'
+        'job1'
+        'job2'
+        'job3' !important;
+        grid-template-columns: 1fr !important;
     }
 }
